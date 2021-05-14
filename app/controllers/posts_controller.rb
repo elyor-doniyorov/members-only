@@ -21,8 +21,8 @@ class PostsController < ApplicationController
     end
   end
 
-   # DELETE /posts/1 or /posts/1.json
-   def destroy
+  # DELETE /posts/1 or /posts/1.json
+  def destroy
     @post.destroy
     respond_to do |format|
       format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
@@ -42,4 +42,3 @@ class PostsController < ApplicationController
     params.require(:post).permit(:title, :body)
   end
 end
-
